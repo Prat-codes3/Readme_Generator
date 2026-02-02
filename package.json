@@ -1,0 +1,12 @@
+{
+  "name": "rg_project",
+  "version": "1.0.0",
+  "description": "this is readme genrator ",
+  "license": "ISC",
+  "author": "Pratik",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
