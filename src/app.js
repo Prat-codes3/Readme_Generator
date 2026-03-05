@@ -1,5 +1,6 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
+import {pub_router} from "./routes/public.route.js"
 const app=express()
 
 //not using cors now as we dont have front end yet
@@ -12,6 +13,6 @@ app.use(express.static("public"))
 
 app.use(cookieParser())
 
-app.use("/api/public")
+app.use("/api/public", pub_router)
 
 export {app}
