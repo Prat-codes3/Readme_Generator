@@ -78,11 +78,11 @@ npm install
 ```
 
 3.create .env:
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=a_very_secret_key
-GEMINI_API_KEY=your_api_key
-GITHUB_TOKEN=your_github_token
+PORT=5000  
+MONGO_URI=your_mongodb_connection_string  
+JWT_SECRET=a_very_secret_key (optional)  
+GEMINI_API_KEY=your_api_key  
+GITHUB_TOKEN=your_github_token  
 
 ### running the application:
 
@@ -93,7 +93,8 @@ GITHUB_TOKEN=your_github_token
 ## usage
 
 on browser:
-step 1:go to https://localhost:8000(or whatever port number you set in .env)
+step 1:go to https://localhost:8000(or whatever port number you set in .env)  
+
 step 2: simply paste the link of your github repo 
 
 on postman:
