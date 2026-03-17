@@ -92,6 +92,11 @@ GITHUB_TOKEN=your_github_token
 
 ## usage
 
+on browser:
+step 1:go to https://localhost:8000(or whatever port number you set in .env)
+step 2: simply paste the link of your github repo 
+
+on postman:
 POST /api/v1/analyser
 
 Body:
