@@ -15,4 +15,9 @@ app.use(cookieParser())
 
 app.use("/api/repo", pub_router)
 
+// to load the index.html file when we hit the root route
+app.get("/", (req, res) => {
+  res.sendFile(process.cwd() + "/public/index.html")
+})
+
 export {app}

@@ -5,6 +5,7 @@ import { generateReadme } from "../services/readme.service.js";
 console.log(`hellooo`);
 console.log(`${process.env.GEMINI_API_KEY} `);
 
+
 const isValidGithubUrl = (parsedUrl) => {
   return (
     parsedUrl.hostname === "github.com" &&
@@ -14,7 +15,7 @@ const isValidGithubUrl = (parsedUrl) => {
 
 const analyser = asyncHandler(async (req, res) => {
   const { repoUrl } = req.body;
-
+  console.log("BODY:", req.body);
   if (!repoUrl) {
     return res.status(400).json({
       success: false,
@@ -43,6 +44,7 @@ const analyser = asyncHandler(async (req, res) => {
   const [owner, repo] = parsedUrl.pathname.split("/").filter(Boolean);
 
   const repoData = await getRepoData(owner, repo);
+  console.log("📩 Before Gemini call");
   const readme = await generateReadme(repoData);
 
   return res.status(200).json({

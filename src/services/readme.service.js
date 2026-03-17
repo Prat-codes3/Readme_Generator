@@ -12,9 +12,8 @@ const generateReadme = async (context) => {
 Generate a professional GitHub README.
 
 IMPORTANT RULES:
-- DO NOT add explanations
+
 - DO NOT add introductions like "Here is your README"
-- DO NOT add conversational text
 - ONLY output the README content
 
 

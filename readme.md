@@ -16,7 +16,6 @@
     *   [Environment Variables](#environment-variables)
     *   [Running the Application](#running-the-application)
 *   [Usage](#usage)
-*   [API Endpoints](#api-endpoints)
 *   [Contributing](#contributing)
 *   [License](#license)
 *   [Contact](#contact)
@@ -91,7 +90,7 @@ GITHUB_TOKEN=your_github_token
      npm run dev
   ```
 
-## send requests using  using postman
+## usage
 
 POST /api/v1/analyser
 
@@ -101,3 +100,21 @@ Body:
   "repoUrl": "https://github.com/account-name/repo-name"
 }
 make sure u send requests in this format only 
+```
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
