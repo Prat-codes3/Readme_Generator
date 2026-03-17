@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
-  apiVersion: "v1"   // 🔥 THIS IS THE FIX
+  apiVersion: "v1"   
 });
 
 const generateReadme = async (context) => {
