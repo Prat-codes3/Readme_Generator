@@ -1,7 +1,8 @@
 import {Router} from "express"
-import analyser from "../controllers/repo.controller.js"
-const router = Router()
+import {analyser} from "../controllers/repo.controller.js"
+import {optionalVerifyJWT} from "../middlewares/authentication.middleware.js"
+const pub_router = Router()
 
-router.route("/analyse-repo").post(optionalverifyJWT,analyser)
+pub_router.route("/analyse").post(optionalVerifyJWT,analyser)
 
-export default router
+export { pub_router }

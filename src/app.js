@@ -13,6 +13,6 @@ app.use(express.static("public"))
 
 app.use(cookieParser())
 
-app.use("/api/public", pub_router)
+app.use("/api/repo", pub_router)
 
 export {app}
