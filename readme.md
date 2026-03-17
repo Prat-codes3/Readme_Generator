@@ -84,7 +84,7 @@ JWT_SECRET=a_very_secret_key
 GEMINI_API_KEY=your_api_key
 GITHUB_TOKEN=your_github_token
 
-4.run the application:
+### running the application:
 
   ```bash
      npm run dev
@@ -123,3 +123,5 @@ Don't forget to give the project a star! Thanks again!
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+## contact 
+pratikwankhede503@gmail.com
