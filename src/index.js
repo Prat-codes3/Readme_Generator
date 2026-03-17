@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config({path:"D:/RG_PROJECT/.env"})
+import "./env.js";   
 
 import { connectDB } from './db/index.js';
 import {app} from './app.js'

@@ -1,5 +1,4 @@
-import dotenv from "dotenv"
-dotenv.config({ path: "D:/YTBackend/.env" });
+
 
 import mongoose,{Schema} from "mongoose"
 import jwt from "jsonwebtoken"

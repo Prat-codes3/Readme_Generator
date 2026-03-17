@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const headers = {
-  "User-Agent": "readme-generator"
+  "User-Agent": "readme-generator",
+  Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
 };
 
 const dependencyFiles = [

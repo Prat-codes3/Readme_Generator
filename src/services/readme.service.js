@@ -1,57 +1,46 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const ai = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY,
+  apiVersion: "v1"   // 🔥 THIS IS THE FIX
+});
 
 const generateReadme = async (context) => {
+  try {
+    console.log("Using NEW SDK");
 
-  const model = genAI.getGenerativeModel({
-    model: "gemini-pro"
-  });
+    const prompt = `
+Generate a professional GitHub README.
 
-  const prompt = `
-You are an expert developer.
-
-Generate a professional GitHub README for the following project.
-
-Project Information:
-
-Name: ${context.name}
-
-Description: ${context.description || "No description provided"}
-
-Primary Language: ${context.language}
-
-Repository Files:
-${context.files.join(", ")}
-
-Dependencies:
-${context.dependencies.join(", ")}
-
-The README should contain:
-
-# Project Title
-Brief description
-
-# Features
-
-# Tech Stack
-
-# Installation
-
-# Usage
-
-# Contributing
-
-# License
-
-Write it in clean Markdown format suitable for GitHub.
+Project Name: ${context.name}
+Description: ${context.description}
+Dependencies: ${context.dependencies.join(", ")}
 `;
 
-  const result = await model.generateContent(prompt);
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: prompt,
+    });
 
-  const readme = result.response.text();
+    const text =
+      response?.candidates?.[0]?.content?.parts?.[0]?.text;
 
-  return readme;
+    return text || "No README generated";
+
+  } catch (err) {
+    console.error("Gemini failed:", err);
+
+    return `# ${context.name}
+
+${context.description}
+
+## Tech Stack
+${context.language}
+
+## Dependencies
+${context.dependencies.join(", ")}
+`;
+  }
 };
 
 export { generateReadme };

@@ -2,6 +2,9 @@ import { asyncHandler } from "../utils/async_Handler.js";
 import { getRepoData } from "../services/github.service.js";
 import { generateReadme } from "../services/readme.service.js";
 
+console.log(`hellooo`);
+console.log(`${process.env.GEMINI_API_KEY} `);
+
 const isValidGithubUrl = (parsedUrl) => {
   return (
     parsedUrl.hostname === "github.com" &&
