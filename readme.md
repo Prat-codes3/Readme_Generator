@@ -90,3 +90,14 @@ GITHUB_TOKEN=your_github_token
   ```bash
      npm run dev
   ```
+
+## send requests using  using postman
+
+POST /api/v1/analyser
+
+Body:
+```json
+{
+  "repoUrl": "https://github.com/account-name/repo-name"
+}
+//make sure u send requests in this format only 
