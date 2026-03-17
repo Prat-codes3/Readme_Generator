@@ -48,8 +48,7 @@ const analyser = asyncHandler(async (req, res) => {
   return res.status(200).json({
     success: true,
     repository: `${owner}/${repo}`,
-    context: repoData,
-    readme
+    readme: readme
   });
 });
 
