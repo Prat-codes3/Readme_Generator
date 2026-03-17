@@ -7,8 +7,7 @@ const ai = new GoogleGenAI({
 
 const generateReadme = async (context) => {
   try {
-    console.log("Using NEW SDK");
-
+   
     const prompt = `
 Generate a professional GitHub README.
 
